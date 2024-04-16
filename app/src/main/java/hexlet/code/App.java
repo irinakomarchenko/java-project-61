@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
+import hexlet.code.games.Even;
 
 public class App {
     public static void main(String[] args) {
@@ -20,8 +21,7 @@ public class App {
                 System.out.println("Hello, " + name + "!");
                 break;
             case 2:
-                Even even = new  Even();
-                even.play();
+                Even.play();
                 break;
             case 0:
                 System.out.println("Goodbye!");
