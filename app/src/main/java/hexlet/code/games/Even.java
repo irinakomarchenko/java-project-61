@@ -4,12 +4,14 @@ import hexlet.code.Engine;
 import hexlet.code.QuestionAnswer;
 import org.apache.commons.lang3.RandomUtils;
 
+import static hexlet.code.Engine.COUNT_OF_ROUND;
+
 public class Even {
 
     public static void play() {
         var description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        var questionAnswers = new QuestionAnswer[3];
-        for (var i = 0; i < 3; i++) {
+        var questionAnswers = new QuestionAnswer[COUNT_OF_ROUND];
+        for (var i = 0; i < COUNT_OF_ROUND; i++) {
             questionAnswers[i] = generateQuestionAnswer();
         }
 
