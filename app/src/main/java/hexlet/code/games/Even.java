@@ -2,7 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.QuestionAnswer;
-import org.apache.commons.lang3.RandomUtils;
+import hexlet.code.Utils;
+
 
 import static hexlet.code.Engine.COUNT_OF_ROUND;
 
@@ -18,9 +19,7 @@ public class Even {
         Engine.runGame(description, questionAnswers);
     }
     static QuestionAnswer generateQuestionAnswer() {
-        final int min = 1;
-        final int max = 100;
-        var number = RandomUtils.nextInt(min, max);
+        var number = Utils.getRandomNumber();
         var isEven = number % 2 == 0;
         var question = Integer.toString(number);
         var answer = isEven ? "yes" : "no";

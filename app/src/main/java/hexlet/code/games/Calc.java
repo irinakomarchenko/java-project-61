@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.QuestionAnswer;
-import org.apache.commons.lang3.RandomUtils;
+import hexlet.code.Utils;
 
 import java.util.Random;
 
@@ -21,12 +21,10 @@ public class Calc {
 
     static QuestionAnswer generateQuestionAnswer() {
         String[] operations = {"+", "-", "*"};
-        final int min = 1;
-        final int max = 20;
         var operationIndex = new Random().nextInt(operations.length);
         var operation = operations[operationIndex];
-        var number1 = RandomUtils.nextInt(min, max);
-        var number2 = RandomUtils.nextInt(min, max);
+        var number1 = Utils.getRandomNumber();
+        var number2 = Utils.getRandomNumber();
         var question = number1 + " " + operation + " " + number2;
         var answer = Integer.toString(calculate(operation, number1, number2));
 
