@@ -23,8 +23,10 @@ public class Calc {
         String[] operations = {"+", "-", "*"};
         var operationIndex = new Random().nextInt(operations.length);
         var operation = operations[operationIndex];
-        var number1 = Utils.getRandomNumber();
-        var number2 = Utils.getRandomNumber();
+        final var min = 1;
+        final var max = 40;
+        var number1 = Utils.getRandomNumber(min, max);
+        var number2 = Utils.getRandomNumber(min, max);
         var question = number1 + " " + operation + " " + number2;
         var answer = Integer.toString(calculate(operation, number1, number2));
 

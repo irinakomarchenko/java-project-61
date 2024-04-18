@@ -19,7 +19,9 @@ public class Even {
         Engine.runGame(description, questionAnswers);
     }
     static QuestionAnswer generateQuestionAnswer() {
-        var number = Utils.getRandomNumber();
+        final int min = 1;
+        final int max = 100;
+        var number = Utils.getRandomNumber(min, max);
         var isEven = number % 2 == 0;
         var question = Integer.toString(number);
         var answer = isEven ? "yes" : "no";

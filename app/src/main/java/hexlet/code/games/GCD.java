@@ -18,11 +18,15 @@ public class GCD {
 
         Engine.runGame(description, questionAnswers);
     }
+
     static QuestionAnswer generateQuestionAnswer() {
-        var n1 = Utils.getRandomNumber();
-        var n2 = Utils.getRandomNumber();
+        final var min = 1;
+        final var max = 50;
+        var n1 = Utils.getRandomNumber(min, max);
+        var n2 = Utils.getRandomNumber(min, max);
         var question = n1 + " " + n2;
         var answer = Integer.toString(gcdByBruteForce(n1, n2));
+
 
         return new QuestionAnswer(question, answer);
 
