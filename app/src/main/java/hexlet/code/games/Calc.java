@@ -12,7 +12,7 @@ public class Calc {
     public static void play() {
         var description = "What is the result of the expression?";
         var questionAnswers = new QuestionAnswer[COUNT_OF_ROUND];
-        for (var i = 0; i < COUNT_OF_ROUND; i++) {
+        for (var i = 0; i < Engine.COUNT_OF_ROUND; i++) {
             questionAnswers[i] = generateQuestionAnswer();
         }
 
@@ -49,6 +49,5 @@ public class Calc {
         }
     }
 }
-
 
 
