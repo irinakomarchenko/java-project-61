@@ -3,17 +3,14 @@ import java.util.Scanner;
 
 public class Cli {
 
-    public static void startGame() {
-        //select game 1 or 2
-        sayHello(); // only if 1
-    }
-    public static void sayHello() {
+    public static void greet() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-    }
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
 
-    //method - game 2 {sayHello()...}
+        scanner.close();
+    }
 }

@@ -25,20 +25,15 @@ public class GCD {
         var n1 = Utils.getRandomNumber(min, max);
         var n2 = Utils.getRandomNumber(min, max);
         var question = n1 + " " + n2;
-        var answer = Integer.toString(gcdByBruteForce(n1, n2));
+        var answer = Integer.toString(gcd(n1, n2));
 
 
         return new QuestionAnswer(question, answer);
 
     }
 
-    static int gcdByBruteForce(int n1, int n2) {
-        int gcd = 1;
-        for (int i = 1; i <= n1 && i <= n2; i++) {
-            if (n1 % i == 0 && n2 % i == 0) {
-                gcd = i;
-            }
-        }
-        return gcd;
+    static int gcd(int n1, int n2) {
+        return n2 == 0 ? n1 : gcd(n2, n1 % n2);
     }
 }
+

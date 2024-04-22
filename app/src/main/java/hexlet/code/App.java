@@ -56,6 +56,7 @@ public class App {
                 System.out.println("Goodbye!");
                 break;
             default:
+                System.out.println("Unknown user choice: " + choice);
                 System.exit(GAME_EXIT);
         }
     }

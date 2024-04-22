@@ -13,10 +13,10 @@ public class Engine {
 
         System.out.println(description);
 
-        for (int i = 0; i < COUNT_OF_ROUND; i++) {
-            System.out.println("Question: " + questionAnswers[i].getQuestion());
+        for (var questionAnswer : questionAnswers) {
+            System.out.println("Question: " + questionAnswer.getQuestion());
             System.out.print("Your answer: ");
-            var answer = questionAnswers[i].getAnswer();
+            var answer = questionAnswer.getAnswer();
             var userAnswer = scanner.next();
 
             if (!answer.equals(userAnswer)) {

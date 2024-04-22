@@ -2,7 +2,13 @@ run-dist:
 	./build/install/app/bin/app
 
 run:
-	./gradlew run
+	gradle run
 
 lint:
-	./gradlew checkstyleMain
+	gradle checkstyleMain
+
+build:
+	gradle build
+
+install:
+	gradle install

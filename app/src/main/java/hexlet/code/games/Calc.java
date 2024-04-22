@@ -4,9 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.QuestionAnswer;
 import hexlet.code.Utils;
 
-import java.util.Random;
 
 import static hexlet.code.Engine.COUNT_OF_ROUND;
+import static hexlet.code.Utils.getRandomOperate;
 
 public class Calc {
     public static void play() {
@@ -21,7 +21,7 @@ public class Calc {
 
     static QuestionAnswer generateQuestionAnswer() {
         String[] operations = {"+", "-", "*"};
-        var operationIndex = new Random().nextInt(operations.length);
+        var operationIndex = getRandomOperate(operations.length);
         var operation = operations[operationIndex];
         final var min = 1;
         final var max = 40;
@@ -43,11 +43,11 @@ public class Calc {
             case "*":
                 return n1 * n2;
             default:
-                System.err.println("Unknown operation");
+                System.err.println("Unknown operation " + operation);
                 System.exit(1);
                 return 0;
         }
+
+
     }
 }
-
-
