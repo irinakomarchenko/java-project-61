@@ -10,5 +10,7 @@ lint:
 build:
 	gradle build
 
+.PHONY: build
+
 install:
 	gradle install
